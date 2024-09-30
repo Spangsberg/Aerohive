@@ -1,0 +1,43 @@
+no capwap client enable
+hostname <hostname>
+radio profile 24G
+radio profile 24G phymode 11ng
+radio profile 24G short-guard-interval
+radio profile 24G band-steering enable
+radio profile 24G weak-snr-suppress enable
+radio profile 24G band-steering mode prefer-5g
+radio profile 24G deny-client 11b
+radio profile 5G
+radio profile 5G phymode 11ac
+radio profile 5G dfs
+radio profile 5G channel-width 20
+radio profile 5G short-guard-interval
+security-object SD-SEC
+security-object SD-SEC security protocol-suite wpa2-aes-psk ascii-key <SSID-Passphrase>
+ssid <SSID-Name>
+ssid <SSID-Name> security-object SD-SEC
+ssid <SSID-Name> dtim-period 5
+ssid <SSID-Name> mode compliance
+ssid <SSID-Name> 11a-rate-set 12-basic 24 36 48 54
+ssid <SSID-Name> 11g-rate-set 12-basic 18 24 36 48 54
+interface wifi0 radio profile 24G
+interface wifi1 radio profile 5G
+interface wifi0 ssid <SSID-Name>
+interface wifi1 ssid <SSID-Name>
+no system led power-saving-mode
+system led brightness dim
+dns server-ip <DNS-IP>
+ntp server <NTP-IP>
+clock time-zone 2
+hive Wifi-Hive
+hive Wifi-Hive password <Hive PAssword>
+interface mgt0 hive Wifi-Hive
+interface eth1 mode bridge-access
+console timeout 0
+no capwap client enable
+admin root-admin admin password <Admin PAssword>
+save config 
+reboot
+y
+
+
