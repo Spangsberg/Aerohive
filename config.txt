@@ -18,6 +18,8 @@ radio profile 5G phymode 11ac
 radio profile 5G dfs
 radio profile 5G channel-width 20
 radio profile 5G short-guard-interval
+interface wifi0 radio channel auto
+interface wifi1 radio channel auto
 interface wifi0 radio profile 24G
 interface wifi1 radio profile 5G
 interface wifi0 mode access
