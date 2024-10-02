@@ -9,7 +9,9 @@ radio profile RADIO0 phymode 11ng
 
 can be changed to:  
 radio profile RADIO0 phymode 11ac  
+
 and both radios will operate in 5GHz mode, on seperate channels. 
+
 
 Please go through the config file and change all < > placeholder sections to suit your needs
 
