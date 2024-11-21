@@ -6,6 +6,7 @@ radio profile RADIO0 short-guard-interval
 radio profile RADIO0 band-steering enable
 radio profile RADIO0 weak-snr-suppress enable
 radio profile RADIO0 band-steering mode prefer-5g
+radio profile RADIO0 band-steering prefer-5g suppression-limit 8
 radio profile RADIO0 deny-client 11b
 radio profile RADIO1
 radio profile RADIO1 phymode 11ac
